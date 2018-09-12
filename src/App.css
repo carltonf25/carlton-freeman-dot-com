@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic&subset=latin,latin-ext');
+
+body {
+  background: rgb(243, 243, 243);
+}
+
+.App {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(36, 36, 36);
+}
+
+.site-header {
+  background-color: #282a36;
+  height: 55px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameSpan {
+  color: #bd93f9;
+}
+
+.header-logo {
+  width: 150px;
+  height: auto;
+  border-radius: 100%;
+  border: 3px solid #b28ce9;
+  margin-top: 75px;
+  box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, .14);
+}
+
+.invisible {
+  display: none;
+}
+
+.modal-overlay{
+  background: rgb(0,0,0,.15);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+.modal nav {
+  background: #fff;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal nav a {
+  margin-left: 1em;
+  text-decoration: none;
+  color: #ff79c5;
+  text-transform: uppercase;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal nav a:hover {
+  color: #da67a8;
+}
+
+.modal nav a:last-child {
+  margin-right: 18px;
+  margin-left: auto;
+}
+
+.modal {
+  width: 75%;
+  height: 750px;
+  background: #f2f2f2;
+  margin: 5% auto;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+}
+
+.project-info {
+  margin-top: 50px;
+  padding: 18px;
+}
+
+.project-info p {
+  text-align: left;
+  width: 70%;
+  margin: 0 auto;
+}
+
+video {
+  width: 60%;
+}
+
+.front-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+
+  margin: 80px auto;
+  max-width: 700px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3em;
+  text-align: left;
+  padding-left: 80px;
+}
+
+.featuredBtn {
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 15px;
+  color: #2c3551;
+  background: #bd93f9;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.featuredBtn:hover {
+  padding: 16px;
+  color: #2c3551;
+  background: #b28ce9;
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+}
+
+.social-link-ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-right: 60px;
+  
+}
+
+.social-link-ul li{
+  display: inline;
+  margin-left: 1em;
+}
+
+.social-link-ul li:nth-child(2) img{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  height: 20px;
+}
+
+.logo-link {
+  height: 30px;
+  transition: border 0.2s ease-in-out;
+}
+
+.logo-link:hover {
+  border-bottom: 3px solid #b28ce9;
+}
+
+
+/* iPhone X */ 
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+/* iPhone 6, 7, 8 */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+
+  }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
