@@ -14,11 +14,19 @@ class Site extends Component {
     this.setState({showModal: !this.state.showModal});
   }
 
+  handleEscapePress(e) {
+    e.preventDefault();
+    if (e.keyCode === 27 ) {
+      console.log('Escape key pressed.')
+      this.setState({showModal: false});
+    }
+  }
+
   render() {
     let {showModal} = this.state;
     return (
-      <div className="App">
-      <Modal toggle={this.modalToggle} show={showModal}/> 
+      <div className="App" onKeyDown={this.logKey}>
+      <Modal onKeyDown={this.handleEscapePress} toggle={this.modalToggle} show={showModal}/> 
       <Header />
       <FrontPage toggle={this.modalToggle}/>
       </div>

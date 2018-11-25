@@ -56,21 +56,25 @@ body {
   justify-content: center;
 }
 
-.modal nav a {
-  margin-left: 1em;
+.modal a {
   text-decoration: none;
   color: #ff79c5;
   text-transform: uppercase;
   transition: color 0.2s ease-in-out;
+  font-weight: 500;
 }
 
-.modal nav a:hover {
+.modal a:hover {
   color: #da67a8;
 }
 
-.modal nav a:last-child {
+.modal a:last-child {
   margin-right: 18px;
   margin-left: auto;
+}
+
+.modal nav a {
+  margin-left: 1em;
 }
 
 .modal {
@@ -86,7 +90,7 @@ body {
   padding: 18px;
 }
 
-.project-info p {
+.projectDescription {
   text-align: left;
   width: 70%;
   margin: 0 auto;
@@ -95,6 +99,7 @@ body {
 video {
   width: 60%;
 }
+
 
 .front-page-content {
   display: flex;
@@ -165,6 +170,10 @@ h1 {
   border-bottom: 3px solid #b28ce9;
 }
 
+.techUsed {
+  text-align: center;
+  margin: 0 auto;
+}
 
 /* iPhone X */ 
 @media only screen 
