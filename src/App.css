@@ -60,12 +60,13 @@ body {
   text-decoration: none;
   color: #ff79c5;
   text-transform: uppercase;
-  transition: color 0.2s ease-in-out;
+  transition: font-size 0.2s ease-in-out;
   font-weight: 500;
 }
 
 .modal a:hover {
   color: #da67a8;
+  font-size: 1.1em;
 }
 
 .modal a:last-child {
