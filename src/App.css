@@ -79,16 +79,20 @@ body {
 }
 
 .modal {
-  width: 75%;
-  height: 750px;
   background: #f2f2f2;
+  width: 70%;
+  height: 790px;
   margin: 5% auto;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+}
+
+.modalContent {
 }
 
 .project-info {
   margin-top: 50px;
   padding: 18px;
+  font-size: 14px;
 }
 
 .projectDescription {

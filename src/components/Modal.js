@@ -77,18 +77,20 @@ class Modal extends React.Component {
             {this.state.loading
               ? <img className="loader" src="img/site-loader.gif" />
               :
-              <React.Fragment>
+              <div className="modalContent">
                 <video controls autoPlay="true" loop>
                   <source src={currentProject.vidURL} type="video/mp4" />
                 </video>
                 <h2>{currentProject.title}</h2>
                 <a target="blank" href={currentProject.gitHubURL}>GitHub Repo</a>
+		<br />
+		<br />
                 <p className="projectDescription">{currentProject.description}</p>
                 <h3>Technologies Used:</h3>
                 <p className="techUsed">
                   {currentProject.techUsed}
                 </p>
-              </React.Fragment>
+              </div>
             }
           </section>
         </div>
