@@ -29,7 +29,7 @@ class Modal extends React.Component {
           'A Slack bot that allows users to schedule Slack messages to send ' +
           'at a specified date and time.',
         vidURL: '/video/ScheduleBot.mov',
-        techUsed: 'React, Express, Node, Slack API',
+        techUsed: 'Express, Node, Slack API',
         gitHubURL: 'https://github.com/carltonf25/schedulebot',
       },
     ],
