@@ -33,10 +33,6 @@ body {
   box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, .14);
 }
 
-.invisible {
-  display: none;
-}
-
 .modal-overlay{
   background: rgb(0,0,0,.15);
   height: 100%;
@@ -81,12 +77,14 @@ body {
 .modal {
   background: #f2f2f2;
   width: 70%;
-  height: 790px;
   margin: 5% auto;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+  overflow: scroll;
+  padding-bottom: 1em;
+  max-width: 800px;
 }
 
-.modalContent {
+.modal-content {
 }
 
 .project-info {
@@ -102,7 +100,7 @@ body {
 }
 
 video {
-  width: 60%;
+  max-height: 500px;
 }
 
 
@@ -130,7 +128,7 @@ h1 {
   background: #bd93f9;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
   text-transform: uppercase;
-  transition: 0.2s ease-in-out;
+  transition: 0.1s ease-in-out;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -138,7 +136,7 @@ h1 {
 }
 
 .featuredBtn:hover {
-  padding: 16px;
+  transform: scale(1.05);
   color: #2c3551;
   background: #b28ce9;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);

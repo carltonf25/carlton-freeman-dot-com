@@ -26,7 +26,9 @@ class Site extends Component {
     let {showModal} = this.state;
     return (
       <div className="App" onKeyDown={this.logKey}>
-      <Modal onKeyDown={this.handleEscapePress} toggle={this.modalToggle} show={showModal}/> 
+      {showModal === true && 
+          <Modal onKeyDown={this.handleEscapePress} toggle={this.modalToggle} show={showModal}/> 
+      }
       <Header />
       <FrontPage toggle={this.modalToggle}/>
       </div>
