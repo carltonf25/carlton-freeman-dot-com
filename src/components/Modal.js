@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spring } from 'react-spring/renderprops';
+import { Spring } from '../dependencies/react-spring/renderprops';
 
 class Modal extends React.Component {
   state = {
