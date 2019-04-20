@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-player": "^1.11.0",
     "react-scripts": "1.1.5",
     "react-spring": "^8.0.19",
     "styled-components": "^4.2.0"

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Spring } from '../dependencies/react-spring/renderprops';
 import styled from 'styled-components';
+import ReactPlayer from 'react-player'
 
 // styled components 💅
 const VideoSection = styled.div`
@@ -23,6 +24,12 @@ const ProjectSwitcher = styled.button`
     cursor: pointer;
     color: #ce609e;
   }
+
+  @media 
+  and (min-device-width : 375px) 
+  and (max-device-width : 667px) {
+    display: none;
+  }
 `;
 
 class Modal extends React.Component {
@@ -35,7 +42,7 @@ class Modal extends React.Component {
         title: 'Game Night',
         description:
           'An in-progress application for creating and managing board game nights with friends. Uses the Twilio API to send SMS invites that allow invitees to RSVP and volunteer to bring refreshments.',
-        vidURL: '/video/game-night.mov',
+        vidURL: 'https://carltonfreeman24.wistia.com/medias/4ab8ezqze3',
         techUsed: 'React, Express, Node, Twilio API',
         gitHubURL: 'https://github.com/carltonf25/game-night',
       },
@@ -45,7 +52,7 @@ class Modal extends React.Component {
         description:
           'CRBN is an app that gives users a score for their carbon emissions, ' +
           'and encourages them to offset that score by attending events that would reduce carbon emissions.',
-        vidURL: '/video/crbn.mov',
+        vidURL: 'https://carltonfreeman24.wistia.com/medias/bs9zlpqzkp',
         techUsed: 'React, Express, Node, HTML, CSS',
         gitHubURL: 'https://github.com/carltonf25/CRBN',
       },
@@ -53,7 +60,7 @@ class Modal extends React.Component {
         id: 3,
         title: 'Freddie Match',
         description: 'A memory game featuring my very photogenic dog, Freddie.',
-        vidURL: '/video/freddie-match.mov',
+        vidURL: 'https://carltonfreeman24.wistia.com/medias/9bfeu6iqfn',
         techUsed: 'React, HTML, CSS',
         gitHubURL: 'https://github.com/carltonf25/freddie-match',
       },
@@ -63,7 +70,7 @@ class Modal extends React.Component {
         description:
           'A Slack bot that allows users to schedule Slack messages to send ' +
           'at a specified date and time.',
-        vidURL: '/video/ScheduleBot.mov',
+        vidURL: 'https://carltonfreeman24.wistia.com/medias/pvt62fjtt3',
         techUsed: 'Express, Node, Slack API',
         gitHubURL: 'https://github.com/carltonf25/schedulebot',
       },
@@ -142,12 +149,13 @@ class Modal extends React.Component {
                       >
                       ‹
                       </ProjectSwitcher>
-                      <video key={currentProject.vidURL} style={{
+                      {/* <video key={currentProject.vidURL} style={{
                         width: `83%`,
                         display: `inline`,
                       }} controls autoPlay="true" loop>
                         <source src={currentProject.vidURL} type="video/mp4" />
-                      </video>
+                      </video> */}
+                      <ReactPlayer url={currentProject.vidURL} playing />
                       <ProjectSwitcher
                         onClick={ 
                           e => {
