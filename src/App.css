@@ -54,15 +54,15 @@ body {
 
 .modal a {
   text-decoration: none;
-  color: #ff79c5;
+  color: #282a36;
   text-transform: uppercase;
-  transition: font-size 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   font-weight: 500;
 }
 
 .modal a:hover {
   color: #da67a8;
-  font-size: 1.1em;
+  transform: scale(1.05);
 }
 
 .modal a:last-child {
@@ -82,6 +82,7 @@ body {
   overflow: scroll;
   padding-bottom: 1em;
   max-width: 800px;
+  height: 800px;
 }
 
 .modal-content {
@@ -98,11 +99,6 @@ body {
   width: 70%;
   margin: 0 auto;
 }
-
-video {
-  max-height: 500px;
-}
-
 
 .front-page-content {
   display: flex;
@@ -128,7 +124,7 @@ h1 {
   background: #bd93f9;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
   text-transform: uppercase;
-  transition: 0.1s ease-in-out;
+  transition: 0.1s ease;
   border: none;
   outline: none;
   border-radius: 8px;

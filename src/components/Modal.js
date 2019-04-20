@@ -1,5 +1,29 @@
 import React from 'react';
 import { Spring } from '../dependencies/react-spring/renderprops';
+import styled from 'styled-components';
+
+// styled components 💅
+const VideoSection = styled.div`
+  display: flex;
+  align-content: center;
+  padding: 0px;
+  video {
+    height: 420px;
+    margin: 0 1em;
+  }
+`;
+const ProjectSwitcher = styled.button`
+  background: none;
+  border: none;
+  color: #ff79c6;
+  transition: 0.2s ease-in;
+  font-size: 3em;
+  :hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    color: #ce609e;
+  }
+`;
 
 class Modal extends React.Component {
   state = {
@@ -7,7 +31,7 @@ class Modal extends React.Component {
     loading: false,
     projects: [
       {
-        id: 4,
+        id: 1,
         title: 'Game Night',
         description:
           'An in-progress application for creating and managing board game nights with friends. Uses the Twilio API to send SMS invites that allow invitees to RSVP and volunteer to bring refreshments.',
@@ -16,7 +40,7 @@ class Modal extends React.Component {
         gitHubURL: 'https://github.com/carltonf25/game-night',
       },
       {
-        id: 1,
+        id: 2,
         title: 'CRBN',
         description:
           'CRBN is an app that gives users a score for their carbon emissions, ' +
@@ -26,7 +50,7 @@ class Modal extends React.Component {
         gitHubURL: 'https://github.com/carltonf25/CRBN',
       },
       {
-        id: 2,
+        id: 3,
         title: 'Freddie Match',
         description: 'A memory game featuring my very photogenic dog, Freddie.',
         vidURL: '/video/freddie-match.mov',
@@ -34,7 +58,7 @@ class Modal extends React.Component {
         gitHubURL: 'https://github.com/carltonf25/freddie-match',
       },
       {
-        id: 3,
+        id: 4,
         title: 'ScheduleBot',
         description:
           'A Slack bot that allows users to schedule Slack messages to send ' +
@@ -45,6 +69,18 @@ class Modal extends React.Component {
       },
     ],
   };
+
+  increment() {
+    let { focusedProject, projects } = this.state;
+
+    if (focusedProject >= projects.length) {
+      this.setState({ focusedProject: 1 });
+    } else {
+      this.setState({
+        focusedProject: focusedProject + 1
+    })
+    }
+  }
 
   render() {
     let { focusedProject, projects, loading } = this.state;
@@ -76,7 +112,9 @@ class Modal extends React.Component {
                           let video = document.querySelector('video');
                           this.setState({ focusedProject: projectId })
                           video.setAttribute('src', clickedProject[0].vidURL)
-                        }}>
+                        }}
+                        style={currentProject.id === project.id ? {borderBottom: `2px solid #ff79c6`,} : {}} 
+                        >
                         {project.title}
                       </a>
                     );
@@ -90,13 +128,42 @@ class Modal extends React.Component {
                     ? <img className="loader" src="img/site-loader.gif" />
                     :
                     <div className="modalContent">
-                      <video style={{
-                        width: `100%`,
-                      }}controls autoPlay="true" loop>
+
+                    <VideoSection>
+                      <ProjectSwitcher
+                        onClick={ 
+                          e => {
+                            e.preventDefault()
+                            focusedProject !== projects[0].id 
+                            ? this.setState({ focusedProject: focusedProject - 1 }) 
+                            : this.setState({ focusedProject: 1 })
+                          }
+                        }  
+                      >
+                      ‹
+                      </ProjectSwitcher>
+                      <video key={currentProject.vidURL} style={{
+                        width: `83%`,
+                        display: `inline`,
+                      }} controls autoPlay="true" loop>
                         <source src={currentProject.vidURL} type="video/mp4" />
                       </video>
+                      <ProjectSwitcher
+                        onClick={ 
+                          e => {
+                            e.preventDefault()
+                            focusedProject !== projects.length 
+                            ? this.setState({ focusedProject: focusedProject + 1 }) 
+                            : this.setState({ focusedProject: 1 })
+                          }
+                        }  
+                      >
+                      ›
+                      </ProjectSwitcher>
+                    </VideoSection>
+                      
                       <h2>{currentProject.title}</h2>
-                      <a target="blank" href={currentProject.gitHubURL}>GitHub Repo</a>
+                      <a style={{color: `#ff79c6`, textDecoration: `underline`}}target="blank" href={currentProject.gitHubURL}>GitHub Repo</a>
                       <br />
                       <br />
                       <p className="projectDescription">{currentProject.description}</p>
