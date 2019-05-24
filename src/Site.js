@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Spring } from "react-spring/renderprops";
+import { Spring } from "./dependencies/react-spring/renderprops";
 import "./App.css";
 import Header from "./components/Header";
 import FrontPage from "./components/FrontPage";

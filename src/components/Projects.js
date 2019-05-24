@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Spring } from "react-spring/renderprops";
+import { Spring } from "../dependencies/react-spring/renderprops";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
 
