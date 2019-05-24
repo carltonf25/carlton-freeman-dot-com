@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic&subset=latin,latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic&subset=latin,latin-ext");
 
 body {
   background: rgb(243, 243, 243);
@@ -6,7 +6,7 @@ body {
 
 .App {
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: rgb(36, 36, 36);
 }
 
@@ -30,17 +30,7 @@ body {
   border-radius: 100%;
   border: 3px solid #b28ce9;
   margin-top: 75px;
-  box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, .14);
-}
-
-.modal-overlay{
-  background: rgb(0,0,0,.15);
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  left: 0;
-  position: fixed;
-  top: 0;
+  box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.14);
 }
 
 .modal nav {
@@ -50,6 +40,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
 }
 
 .modal a {
@@ -72,17 +63,6 @@ body {
 
 .modal nav a {
   margin-left: 1em;
-}
-
-.modal {
-  background: #f2f2f2;
-  width: 70%;
-  margin: 5% auto;
-  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
-  overflow: scroll;
-  padding-bottom: 1em;
-  max-width: 800px;
-  height: 800px;
 }
 
 .modal-content {
@@ -122,7 +102,7 @@ h1 {
   padding: 15px;
   color: #2c3551;
   background: #bd93f9;
-  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
   text-transform: uppercase;
   transition: 0.1s ease;
   border: none;
@@ -135,7 +115,7 @@ h1 {
   transform: scale(1.05);
   color: #2c3551;
   background: #b28ce9;
-  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, .14);
+  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
 }
 
 .social-link-ul {
@@ -146,15 +126,14 @@ h1 {
   justify-content: center;
   margin-top: 30px;
   margin-right: 60px;
-  
 }
 
-.social-link-ul li{
+.social-link-ul li {
   display: inline;
   margin-left: 1em;
 }
 
-.social-link-ul li:nth-child(2) img{
+.social-link-ul li:nth-child(2) img {
   padding-top: 7px;
   padding-bottom: 7px;
   height: 20px;
@@ -174,11 +153,8 @@ h1 {
   margin: 0 auto;
 }
 
-/* iPhone X */ 
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) {
+/* iPhone X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .modal {
     width: 100%;
     height: 100%;
@@ -195,9 +171,7 @@ and (-webkit-device-pixel-ratio : 3) {
 }
 
 /* iPhone 6, 7, 8 */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .modal {
     width: 100%;
     height: 100%;
@@ -210,13 +184,10 @@ and (max-device-width : 667px) {
 
   h1 {
     font-size: 2em;
-
   }
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .modal {
     width: 100%;
     height: 100%;

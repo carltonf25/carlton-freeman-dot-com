@@ -9,7 +9,7 @@ const FrontPage = ({toggle}) => (
         </h1>
         <button 
 	  className="featuredBtn"
-	  onClick={toggle}
+	  onClick={() => toggle()}
 	>
 	  FEATURED PROJECTS
 	</button>
