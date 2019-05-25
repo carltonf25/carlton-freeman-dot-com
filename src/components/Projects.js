@@ -39,6 +39,14 @@ const ProjectsWrapper = styled.div`
   background: #fff;
   text-align: center;
   width: 100%;
+  height: 100%;
+  li {
+    margin-left: 15%;
+    text-align: left;
+    @media (max-width: 500px) {
+      margin-left: 0;
+    }
+  }
   nav {
     background: #fff;
     width: 100%;
@@ -49,6 +57,14 @@ const ProjectsWrapper = styled.div`
       background: #282a36;
       a {
         color: #fff;
+        :hover {
+          color: #dedede;
+        }
+      }
+      a:last-child {
+        :hover {
+          color: #ff79c6;
+        }
       }
     }
     @media (max-width: 500px) {
@@ -61,10 +77,6 @@ const ProjectsWrapper = styled.div`
       text-decoration: none;
       font-weight: 500;
       transition: 0.2s ease-in-out;
-      :hover {
-        transform: scale(1.5);
-        color: #e8d1ff;
-      }
     }
   }
 `;
@@ -73,7 +85,6 @@ const CloseButton = styled.a`
   margin-left: auto;
   transition: 0.2s ease-in-out;
   :hover {
-    transform: scale(1.9);
   }
 `;
 
@@ -217,7 +228,7 @@ const Projects = closeModal => {
               }}
             >
               {focusedProject.iDid.map(item => (
-                <li style={{ marginLeft: `20%` }}>{item}</li>
+                <li>{item}</li>
               ))}
             </ul>
           </div>
