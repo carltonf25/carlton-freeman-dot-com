@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Spring } from "./dependencies/react-spring/renderprops";
 import "./App.css";
 import Header from "./components/Header";
-import FrontPage from "./components/FrontPage";
 import Projects from "./components/Projects";
 import Modal from "./components/Modal";
 
@@ -35,10 +33,7 @@ const Site = () => {
               <div className="social-link-container">
                 <ul className="social-link-ul">
                   <li>
-                    <a
-                      target="blank"
-                      href="https://github.com/carltonf25?tab=stars"
-                    >
+                    <a target="blank" href="https://github.com/carltonf25">
                       <img
                         className="logo-link"
                         src="img/Github_Logo.png"

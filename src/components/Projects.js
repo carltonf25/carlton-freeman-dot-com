@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Spring } from "../dependencies/react-spring/renderprops";
 import styled from "styled-components";
 import ReactPlayer from "react-player";
@@ -13,23 +13,11 @@ const VideoSection = styled.div`
   video {
     width: 80%;
   }
+  img {
+    max-height: 400px;
+  }
   @media (max-width: 500px) {
     width: 100%;
-  }
-`;
-const ProjectSwitcher = styled.button`
-  border: none;
-  color: #ff79c6;
-  transition: 0.2s ease-in;
-  font-size: 3em;
-  background: none;
-  :hover {
-    transform: scale(1.08);
-    cursor: pointer;
-    color: #ce609e;
-  }
-  @media (max-width: 500px) {
-    display: none;
   }
 `;
 const ProjectsWrapper = styled.div`
@@ -89,7 +77,6 @@ const CloseButton = styled.a`
 `;
 
 const Projects = closeModal => {
-  const video = document.querySelector("video");
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -107,18 +94,17 @@ const Projects = closeModal => {
     },
     {
       id: 2,
-      title: "CRBN",
+      title: "Hook Facts",
       description:
-        "CRBN is an app that gives users a score for their carbon emissions, " +
-        "and encourages them to offset that score by attending events that would reduce carbon emissions.",
-      vidURL: "https://carltonfreeman24.wistia.com/medias/bs9zlpqzkp",
-      techUsed: "React, Express, Node, HTML, CSS",
-      gitHubURL: "https://github.com/carltonf25/CRBN",
+        "A celebration of the 1991 cinematic masterpiece, Hook, written using React hooks",
+      gif:
+        "https://p33.tr1.n0.cdn.getcloudapp.com/items/BlupJw2b/hook-facts.gif",
+      techUsed: "React, Styled Components",
+      gitHubURL: "https://github.com/carltonf25/hook-facts",
       iDid: [
-        "UI Design in Sketch",
+        "UI Design in Figma",
         "Front end development using React, JavaScript, CSS, and HTML",
-        "Back end logic in Node and Express",
-        "Database management with Postgres"
+        "Mock API server using typicode/json-server"
       ]
     },
     {
@@ -163,7 +149,7 @@ const Projects = closeModal => {
                     event.preventDefault();
                     let projectId = Number(event.target.id);
                     let clickedProject = projects.filter(p => {
-                      return p.id == projectId;
+                      return p.id === projectId;
                     });
                     setFocusedProject(clickedProject[0]);
                   }}
@@ -192,45 +178,55 @@ const Projects = closeModal => {
               <p>loading...</p>
             ) : (
               <VideoSection>
+                {focusedProject.vidURL ? (
+                  <ReactPlayer
+                    id="wistia-player"
+                    url={focusedProject.vidURL}
+                    playing
+                  />
+                ) : (
+                  <img alt="project-gif" src={focusedProject.gif} />
+                )}
                 {/* <video key={currentProject.vidURL} style={{
                         width: `83%`,
                         display: `inline`,
                       }} controls autoPlay="true" loop>
                         <source src={currentProject.vidURL} type="video/mp4" />
                       </video> */}
-                <ReactPlayer
-                  id="wistia-player"
-                  url={focusedProject.vidURL}
-                  playing
-                />
               </VideoSection>
             )}
-            <h2>{focusedProject.title}</h2>
-            <a
+            <div
               style={{
-                color: `#ff79c6`,
-                textDecoration: `underline`,
-                textTransform: `uppercase`
-              }}
-              target="blank"
-              href={focusedProject.gitHubURL}
-            >
-              GitHub Repo
-            </a>
-            <br />
-            <br />
-            <p className="projectDescription">{focusedProject.description}</p>
-            <h3 style={{ textTransform: `uppercase` }}>What I Did</h3>
-            <ul
-              style={{
-                textAlign: `left`,
+                width: `60%`,
                 margin: `0 auto`
               }}
             >
-              {focusedProject.iDid.map(item => (
-                <li>{item}</li>
-              ))}
-            </ul>
+              <h2>{focusedProject.title}</h2>
+              <a
+                style={{
+                  color: `#ff79c6`,
+                  textDecoration: `underline`,
+                  textTransform: `uppercase`
+                }}
+                target="blank"
+                href={focusedProject.gitHubURL}
+              >
+                GitHub Repo
+              </a>
+              <br />
+              <br />
+              <p className="projectDescription">{focusedProject.description}</p>
+              <h3 style={{ textTransform: `uppercase` }}>What I Did</h3>
+              <ul
+                style={{
+                  textAlign: `left`
+                }}
+              >
+                {focusedProject.iDid.map(item => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </ProjectsWrapper>
       )}
