@@ -9,23 +9,18 @@ const Site = () => {
 
   return (
     <div className="App">
-      {toggle ? (
-        <Modal>
-          <Projects
-            closeModal={() => {
-              setToggle(false);
-            }}
-          />
-        </Modal>
-      ) : (
         <React.Fragment>
-          <Header />
           <main className="front-page-content">
-            <div className="basic-page-info">
+            <div style={{
+              height: `100vh`,
+              display: `flex`,
+              flexDirection: `column`,  
+              alignItems: `center`,
+            }}>
               <h1
                 style={{
                   fontSize: `3em`,
-                  fontWeight: 500
+                  fontWeight: 500,
                 }}
               >
                 Hi, I'm <span className="nameSpan">Carlton</span>.
@@ -33,13 +28,18 @@ const Site = () => {
               <h2
                 style={{
                   fontSize: `24px`,
-                  fontWeight: 500
+                  fontWeight: 500,
+                  textAlign: `left`,
+                  maxWidth: `560px`
                 }}
               >
                 I build applications and websites using modern web technologies,
                 like React, Node, Express, and Laravel.
               </h2>
-              <button className="featuredBtn" onClick={() => setToggle(true)}>
+              <button className="featuredBtn" onClick={() => window.scrollTo({
+                top: `850`,
+                behavior: 'smooth'
+              })} >
                 FEATURED PROJECTS
               </button>
               <div className="social-link-container">
@@ -77,9 +77,9 @@ const Site = () => {
                 </ul>
               </div>
             </div>
+            <Projects />
           </main>
         </React.Fragment>
-      )}
     </div>
   );
 };

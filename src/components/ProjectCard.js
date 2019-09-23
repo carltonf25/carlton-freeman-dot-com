@@ -7,15 +7,35 @@ const CardWrapper = styled.div`
   padding: 1.5em;
   margin: 1em;
   max-width: 300px;
-  cursor: pointer;
   transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card-link {
+    margin: 1em;
+    text-decoration: none;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+    color: #575756;
+
+
+    :hover {
+      border-bottom: 3px solid #ff71e0;
+    }
+  }
 
   :hover {
     transform: scale(1.02);
   }
+
+  @media only screen and (max-width: 950px) {
+   width: 100%; 
+  }
 `;
 
-const ProjectCard = ({ title, description, tech }) => {
+const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
   const [hovered, setHovered] = useState(false);
   return (
     <CardWrapper
@@ -24,15 +44,22 @@ const ProjectCard = ({ title, description, tech }) => {
     >
       <h2
         style={{
-          width: `50%`,
           margin: `0 auto`,
           borderBottom: hovered ? `4px solid #ff71e0` : `none`,
+          width: `50%`,
           transition: `0.2s ease`
         }}
       >
         {title}
       </h2>
-      <p>{description}</p>
+      <p style={{textAlign: `left`}}>{description}</p>
+      <div style={{
+        marginBottom: `1.5em`
+      }}>
+        <a className='card-link' target="blank" href={gitHubURL}>GitHub</a>
+        {liveURL && <a className='card-link' target="blank" href={liveURL}>Live Site</a>}
+      </div>
+      <div>
       {tech.map(t => (
         <img
           title={t.title}
@@ -44,6 +71,7 @@ const ProjectCard = ({ title, description, tech }) => {
           }}
         />
       ))}
+      </div>
     </CardWrapper>
   );
 };

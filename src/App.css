@@ -2,12 +2,14 @@
 
 body {
   background: rgb(243, 243, 243);
+  background-color: #fefefe;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
-
 .App {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   color: rgb(36, 36, 36);
+
 }
 
 .site-header {
@@ -33,15 +35,6 @@ body {
   box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.14);
 }
 
-.modal nav {
-  background: #fff;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
 
 .modal a {
   text-decoration: none;
@@ -65,9 +58,6 @@ body {
   margin-left: 1em;
 }
 
-.modal-content {
-}
-
 .modalContent {
   display: flex;
   flex-wrap: wrap;
@@ -80,19 +70,13 @@ body {
   font-size: 14px;
 }
 
-.projectDescription {
-  text-align: left;
-  width: 70%;
-  margin: 0 auto;
-}
 
 .front-page-content {
   display: flex;
   flex-direction: column;
   justify-items: center;
-
   margin: 80px auto;
-  max-width: 700px;
+  width: 80%;
 }
 
 .featuredBtn {
@@ -108,6 +92,8 @@ body {
   outline: none;
   border-radius: 10px;
   font-size: 16px;
+  max-width: 250px;
+  
 }
 
 .featuredBtn:hover {
@@ -115,6 +101,11 @@ body {
   color: #2c3551;
   background: #b28ce9;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
+}
+j
+.card-link {
+  margin: 1em;
+  text-decoration: none;
 }
 
 .social-link-ul {
@@ -165,6 +156,9 @@ body {
   }
 }
 
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+  }
 /* iPhone 6, 7, 8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .modal {
