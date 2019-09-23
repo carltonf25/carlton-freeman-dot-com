@@ -68,6 +68,12 @@ body {
 .modal-content {
 }
 
+.modalContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 .project-info {
   margin-top: 50px;
   padding: 18px;
@@ -89,30 +95,23 @@ body {
   max-width: 700px;
 }
 
-h1 {
-  font-weight: 500;
-  font-size: 3em;
-  text-align: left;
-  padding-left: 80px;
-}
-
 .featuredBtn {
   cursor: pointer;
   margin-top: 15px;
   padding: 15px;
   color: #2c3551;
   background: #bd93f9;
-  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
+  box-shadow: 0 4px 6px hsla(0, 0%, 0.2);
   text-transform: uppercase;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
   border: none;
   outline: none;
-  border-radius: 8px;
-  font-size: 18px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .featuredBtn:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   color: #2c3551;
   background: #b28ce9;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
@@ -164,10 +163,6 @@ h1 {
   video {
     width: 100%;
   }
-
-  h1 {
-    font-size: 2em;
-  }
 }
 
 /* iPhone 6, 7, 8 */
@@ -181,10 +176,6 @@ h1 {
   video {
     width: 100%;
   }
-
-  h1 {
-    font-size: 2em;
-  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
@@ -196,9 +187,5 @@ h1 {
 
   video {
     width: 100%;
-  }
-
-  h1 {
-    font-size: 2em;
   }
 }

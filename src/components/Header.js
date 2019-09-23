@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const Header = () => (
+const Header = () => {
+  return (
     <header className="site-header">
-      <img className="header-logo" src="img/profile_pic.jpg" alt="carlton-logo" />
+      <nav>
+        <a href="/">Home</a>
+        <a href="/">Youtube</a>
+        <a href="/">Work</a>
+        <a href="/">Contact</a>
+      </nav>
     </header>
-)
+  );
+};
 
-export default Header; 
+export default Header;

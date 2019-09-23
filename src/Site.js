@@ -22,11 +22,23 @@ const Site = () => {
           <Header />
           <main className="front-page-content">
             <div className="basic-page-info">
-              <h1>
-                Hi, I'm <span className="nameSpan">Carlton Freeman</span>.{" "}
-                <br />
-                I'm a full-stack JavaScript developer from Atlanta.
+              <h1
+                style={{
+                  fontSize: `3em`,
+                  fontWeight: 500
+                }}
+              >
+                Hi, I'm <span className="nameSpan">Carlton</span>.
               </h1>
+              <h2
+                style={{
+                  fontSize: `24px`,
+                  fontWeight: 500
+                }}
+              >
+                I build applications and websites using modern web technologies,
+                like React, Node, Express, and Laravel.
+              </h2>
               <button className="featuredBtn" onClick={() => setToggle(true)}>
                 FEATURED PROJECTS
               </button>

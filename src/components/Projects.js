@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Spring } from "../dependencies/react-spring/renderprops";
 import styled from "styled-components";
+import ProjectCard from "./ProjectCard";
 import ReactPlayer from "react-player";
 
 // styled components 💅
@@ -24,7 +25,7 @@ const ProjectsWrapper = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
-  background: #fff;
+  background: #f3f3f3;
   text-align: center;
   width: 100%;
   height: 100%;
@@ -70,8 +71,8 @@ const ProjectsWrapper = styled.div`
 `;
 const CloseButton = styled.a`
   font-size: 1.5em;
-  margin-left: auto;
-  transition: 0.2s ease-in-out;
+  flex-basis: end;
+  transition: 0.2s ease-inout;
   :hover {
   }
 `;
@@ -82,9 +83,26 @@ const Projects = closeModal => {
       id: 1,
       title: "Game Night",
       description:
-        "An in-progress application for creating and managing board game nights with friends. Uses the Twilio API to send SMS invites that allow invitees to RSVP and volunteer to bring refreshments.",
+        "An application for creating and managing game nights with friends. Enter an event code to view an event and RSVP, or log in to create and manage your own events.",
       vidURL: "https://carltonfreeman24.wistia.com/medias/4ab8ezqze3",
       gitHubURL: "https://github.com/carltonf25/game-night",
+      tech: [
+        {
+          title: "React",
+          img:
+            "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        },
+        {
+          title: "Figma",
+          img:
+            "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg"
+        },
+        {
+          title: "Lumen",
+          img:
+            "https://freeicons.io/laravel/public/uploads/icons/png/3551373941551941187-512.png"
+        }
+      ],
       iDid: [
         "UI Design in Sketch",
         "Front end development using React, JavaScript, CSS, and HTML",
@@ -99,7 +117,18 @@ const Projects = closeModal => {
         "A celebration of the 1991 cinematic masterpiece, Hook, written using React hooks",
       gif:
         "https://p33.tr1.n0.cdn.getcloudapp.com/items/BlupJw2b/hook-facts.gif",
-      techUsed: "React, Styled Components",
+      tech: [
+        {
+          title: "React",
+          img:
+            "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        },
+        {
+          title: "Figma",
+          img:
+            "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg"
+        }
+      ],
       gitHubURL: "https://github.com/carltonf25/hook-facts",
       iDid: [
         "UI Design in Figma",
@@ -114,7 +143,19 @@ const Projects = closeModal => {
       vidURL: "https://carltonfreeman24.wistia.com/medias/9bfeu6iqfn",
       techUsed: "React, HTML, CSS",
       gitHubURL: "https://github.com/carltonf25/freddie-match",
-      iDid: ["Front end development using React, JavaScript, CSS, and HTML"]
+      iDid: ["Front end development using React, JavaScript, CSS, and HTML"],
+      tech: [
+        {
+          title: "React",
+          img:
+            "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        },
+        {
+          title: "Figma",
+          img:
+            "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg"
+        }
+      ]
     },
     {
       id: 4,
@@ -129,6 +170,13 @@ const Projects = closeModal => {
         "Back end development in Node and Express",
         "Data management in Postgres",
         "Slack interactivity via API"
+      ],
+      tech: [
+        {
+          title: "Node",
+          img:
+            "https://banner2.kisspng.com/20180619/vjl/kisspng-node-js-angularjs-react-javascript-npm-node-js-5b28f6111cb2c9.1605132215294110891176.jpg"
+        }
       ]
     }
   ]);
@@ -137,32 +185,8 @@ const Projects = closeModal => {
   return (
     <Spring from={{ right: -500, opacity: 0 }} to={{ right: 0, opacity: 1 }}>
       {slideIn => (
-        <ProjectsWrapper style={slideIn}>
-          <nav>
-            {projects.map(project => {
-              return (
-                <a
-                  key={project.id}
-                  id={project.id}
-                  href="#0"
-                  onClick={event => {
-                    event.preventDefault();
-                    let projectId = Number(event.target.id);
-                    let clickedProject = projects.filter(p => {
-                      return p.id === projectId;
-                    });
-                    setFocusedProject(clickedProject[0]);
-                  }}
-                  style={
-                    focusedProject.id === project.id
-                      ? { borderBottom: `2px solid #ff79c6` }
-                      : {}
-                  }
-                >
-                  {project.title}
-                </a>
-              );
-            })}
+        <React.Fragment>
+          <ProjectsWrapper style={slideIn}>
             <CloseButton
               href="#0"
               onClick={e => {
@@ -172,63 +196,18 @@ const Projects = closeModal => {
             >
               ✕
             </CloseButton>
-          </nav>
-          <div className="modalContent">
-            {loading ? (
-              <p>loading...</p>
-            ) : (
-              <VideoSection>
-                {focusedProject.vidURL ? (
-                  <ReactPlayer
-                    id="wistia-player"
-                    url={focusedProject.vidURL}
-                    playing
-                  />
-                ) : (
-                  <img alt="project-gif" src={focusedProject.gif} />
-                )}
-                {/* <video key={currentProject.vidURL} style={{
-                        width: `83%`,
-                        display: `inline`,
-                      }} controls autoPlay="true" loop>
-                        <source src={currentProject.vidURL} type="video/mp4" />
-                      </video> */}
-              </VideoSection>
-            )}
-            <div
-              style={{
-                width: `60%`,
-                margin: `0 auto`
-              }}
-            >
-              <h2>{focusedProject.title}</h2>
-              <a
-                style={{
-                  color: `#ff79c6`,
-                  textDecoration: `underline`,
-                  textTransform: `uppercase`
-                }}
-                target="blank"
-                href={focusedProject.gitHubURL}
-              >
-                GitHub Repo
-              </a>
-              <br />
-              <br />
-              <p className="projectDescription">{focusedProject.description}</p>
-              <h3 style={{ textTransform: `uppercase` }}>What I Did</h3>
-              <ul
-                style={{
-                  textAlign: `left`
-                }}
-              >
-                {focusedProject.iDid.map(item => (
-                  <li>{item}</li>
-                ))}
-              </ul>
+            <h1>Case Studies</h1>
+            <div className="modalContent">
+              {projects.map(project => (
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  tech={project.tech}
+                />
+              ))}
             </div>
-          </div>
-        </ProjectsWrapper>
+          </ProjectsWrapper>
+        </React.Fragment>
       )}
     </Spring>
   );
