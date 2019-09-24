@@ -9,6 +9,13 @@ import projects from "../projects.json"
 const ProjectsWrapper = styled.div`
 height: 100vh;
   text-align: center;
+    .card-container {
+      justify-content: center;
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
   li {
     margin-left: 15%;
     text-align: left;
@@ -36,9 +43,6 @@ height: 100vh;
         }
       }
     }
-    @media (max-width: 500px) {
-      width: 100%;
-    }
     a {
       color: #282a36;
       text-transform: uppercase;
@@ -56,13 +60,7 @@ const Projects = () => {
       {slideIn => (
           <ProjectsWrapper style={slideIn}>
             <h1>Projects</h1>
-            <div style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              alignItems: `stretch`,
-              width: `100%`
-
-            }}>
+            <div className="card-container">
               {projects.map(project => (
                 <ProjectCard
                   title={project.title}

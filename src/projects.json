@@ -5,7 +5,7 @@
       "description":
         "An application for creating and managing game nights with friends. Enter an event code to view an event and RSVP, or log in to create and manage your own events.",
       "vidURL": "https://carltonfreeman24.wistia.com/medias/4ab8ezqze3",
-      "gitHubURL": "https://github.com/carltonf25/game-night",
+      "gitHubURL": "https://github.com/carltonf25/game-night-api",
       "liveURL": "https://game-night-v1.netlify.com",
       "tech": [
         {

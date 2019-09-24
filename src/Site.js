@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
-import Header from "./components/Header";
 import Projects from "./components/Projects";
-import Modal from "./components/Modal";
+import BackToTopButton from "./components/BackToTopButton";
 
 const Site = () => {
   const [toggle, setToggle] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(window.pageYOffset);
 
+  document.onscroll = () => {setScrollPosition(window.pageYOffset)};
   return (
     <div className="App">
         <React.Fragment>
@@ -78,6 +79,9 @@ const Site = () => {
               </div>
             </div>
             <Projects />
+            {scrollPosition > 100 && 
+            <BackToTopButton />
+            }
           </main>
         </React.Fragment>
     </div>
