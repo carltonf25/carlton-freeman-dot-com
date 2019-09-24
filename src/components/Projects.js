@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import { Spring } from "../dependencies/react-spring/renderprops";
+import { Spring } from "react-spring/renderprops";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import ReactPlayer from "react-player";
-import projects from "../projects.json"
+import projects from "../projects.json";
 
 // styled components 💅
 const ProjectsWrapper = styled.div`
-height: 100vh;
+  height: 100vh;
   text-align: center;
-    .card-container {
-      justify-content: center;
-      align-items: stretch;
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-    }
+  .card-container {
+    justify-content: center;
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
   li {
     margin-left: 15%;
     text-align: left;
@@ -58,20 +58,20 @@ const Projects = () => {
   return (
     <Spring from={{ right: -500, opacity: 0 }} to={{ right: 0, opacity: 1 }}>
       {slideIn => (
-          <ProjectsWrapper style={slideIn}>
-            <h1>Projects</h1>
-            <div className="card-container">
-              {projects.map(project => (
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  tech={project.tech}
-                  gitHubURL={project.gitHubURL}
-                  liveURL={project.liveURL ? project.liveURL: null}
-                />
-              ))}
-            </div>
-          </ProjectsWrapper>
+        <ProjectsWrapper style={slideIn}>
+          <h1>Projects</h1>
+          <div className="card-container">
+            {projects.map(project => (
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                tech={project.tech}
+                gitHubURL={project.gitHubURL}
+                liveURL={project.liveURL ? project.liveURL : null}
+              />
+            ))}
+          </div>
+        </ProjectsWrapper>
       )}
     </Spring>
   );
