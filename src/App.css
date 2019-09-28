@@ -9,7 +9,6 @@ body {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   color: rgb(36, 36, 36);
-
 }
 
 .site-header {
@@ -34,7 +33,6 @@ body {
   margin-top: 75px;
   box-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.14);
 }
-
 
 .modal a {
   text-decoration: none;
@@ -70,7 +68,6 @@ body {
   font-size: 14px;
 }
 
-
 .front-page-content {
   display: flex;
   flex-direction: column;
@@ -93,7 +90,6 @@ body {
   border-radius: 10px;
   font-size: 16px;
   max-width: 250px;
-  
 }
 
 .featuredBtn:hover {
@@ -102,8 +98,7 @@ body {
   background: #b28ce9;
   box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
 }
-j
-.card-link {
+j .card-link {
   margin: 1em;
   text-decoration: none;
 }
@@ -142,7 +137,20 @@ j
   text-align: center;
   margin: 0 auto;
 }
-
+#back-btn {
+  font-size: 12px;
+  border: none;
+  color: #fefefe;
+  background: #3c2d50;
+  box-shadow: 0 4px 6px rgba(100, 100, 100, 0.2);
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  padding: 1em 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
 /* iPhone X */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .modal {
@@ -156,9 +164,9 @@ j
   }
 }
 
-  @media only screen and (max-width: 950px) {
-    width: 100%;
-  }
+@media only screen and (max-width: 950px) {
+  width: 100%;
+}
 /* iPhone 6, 7, 8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   .modal {
