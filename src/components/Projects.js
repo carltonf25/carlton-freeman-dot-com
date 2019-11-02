@@ -3,7 +3,7 @@ import { Spring } from "react-spring/renderprops";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 import ReactPlayer from "react-player";
-import projects from "../projects.json";
+import projects from "../projects.js";
 
 // styled components 💅
 const ProjectsWrapper = styled.div`

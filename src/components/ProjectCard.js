@@ -20,7 +20,6 @@ const CardWrapper = styled.div`
     text-transform: uppercase;
     color: #575756;
 
-
     :hover {
       border-bottom: 3px solid #ff71e0;
     }
@@ -31,7 +30,7 @@ const CardWrapper = styled.div`
   }
 
   @media only screen and (max-width: 950px) {
-   width: 100%; 
+    width: 100%;
   }
 `;
 
@@ -52,25 +51,34 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
       >
         {title}
       </h2>
-      <p style={{textAlign: `left`}}>{description}</p>
-      <div style={{
-        marginBottom: `1.5em`
-      }}>
-        <a className='card-link' target="blank" href={gitHubURL}>GitHub</a>
-        {liveURL && <a className='card-link' target="blank" href={liveURL}>Live Site</a>}
+      <p style={{ textAlign: `left` }}>{description}</p>
+      <div
+        style={{
+          marginBottom: `1.5em`
+        }}
+      >
+        <a className="card-link" target="blank" href={gitHubURL}>
+          GitHub
+        </a>
+        {liveURL && (
+          <a className="card-link" target="blank" href={liveURL}>
+            Live Site
+          </a>
+        )}
       </div>
       <div>
-      {tech.map(t => (
-        <img
-          title={t.title}
-          alt={t.title}
-          src={t.img}
-          style={{
-            width: `2em`,
-            marginRight: `1em`
-          }}
-        />
-      ))}
+        {tech.map(t => (
+          <img
+            title={t.title}
+            alt={t.title}
+            src={t.img}
+            style={{
+              width: `2em`,
+              maxWidth: `50px`,
+              marginRight: `1em`
+            }}
+          />
+        ))}
       </div>
     </CardWrapper>
   );

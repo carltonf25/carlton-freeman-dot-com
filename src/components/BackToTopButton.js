@@ -2,8 +2,6 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 
 const BackToTopButton = () => {
-  let windowSize = window.innerWidth;
-
   const slideIn = useSpring({
     from: {
       transform: `translate3d( 300px, 0, 0)`

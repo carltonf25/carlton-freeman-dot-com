@@ -138,7 +138,6 @@ j .card-link {
   margin: 0 auto;
 }
 #back-btn {
-  font-size: 12px;
   border: none;
   color: #fefefe;
   background: #3c2d50;
@@ -146,11 +145,10 @@ j .card-link {
   position: fixed;
   bottom: 2em;
   right: 2em;
-  padding: 1em 1em;
-  text-transform: uppercase;
-  font-weight: 600;
+  padding: 1em 2em;
   cursor: pointer;
 }
+
 /* iPhone X */
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) {
   .modal {
