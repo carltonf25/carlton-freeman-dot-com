@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Projects from "./components/Projects";
 import BackToTopButton from "./components/BackToTopButton";
+import mediumLogo from "./img/medium-logo.jpg";
 
 const Site = () => {
   const [toggle, setToggle] = useState(false);
@@ -72,6 +73,15 @@ const Site = () => {
                       className="logo-link"
                       src="img/linkedin-logo.png"
                       alt="linkedin-logo"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a target="blank" href="https://medium.com/@carltonfreeman">
+                    <img
+                      className="logo-link"
+                      src="https://banner2.cleanpng.com/20180328/lvw/kisspng-medium-logo-publishing-blog-i-5abb6adcaa7024.4856922615222320286981.jpg"
+                      alt="medium-logo"
                     />
                   </a>
                 </li>

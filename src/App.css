@@ -119,9 +119,13 @@ j .card-link {
 }
 
 .social-link-ul li:nth-child(2) img {
-  padding-top: 7px;
-  padding-bottom: 7px;
   height: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+.social-link-ul li:nth-child(2) img:hover {
+  height: 20px;
+  padding-bottom: 3px;
 }
 
 .logo-link {
