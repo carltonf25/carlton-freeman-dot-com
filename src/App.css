@@ -122,7 +122,10 @@ j .card-link {
   height: 20px;
   transition: 0.2s ease-in-out;
 }
-
+.social-link-ul li:nth-child(2) img {
+  height: 20px;
+  transition: 0.2s ease-in-out;
+}
 .social-link-ul li:nth-child(2) img:hover {
   height: 20px;
   padding-bottom: 3px;
@@ -130,11 +133,12 @@ j .card-link {
 
 .logo-link {
   height: 30px;
-  transition: border 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .logo-link:hover {
-  border-bottom: 3px solid #b28ce9;
+  border-bottom: 3px solid #ff71e0;
+  transform: translateY(-5px);
 }
 
 .techUsed {
