@@ -32,6 +32,29 @@ var projects = [
 		]
 	},
 	{
+		id: 5,
+		title: "Acquire (UI Prototype)",
+		description:
+			"This is a test UI for an app that tracks potential business acquisitions",
+		vidURL: "https://acquire.netlify.com",
+		techUsed: "React, HTML, CSS, Styled Components, Figma",
+		gitHubURL: "https://github.com/carltonf25/acquire",
+		liveURL: "https://acquire.netlify.com/",
+		iDid: ["React UI", "Designed in Figma"],
+		tech: [
+			{
+				title: "React",
+				img:
+					"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+			},
+			{
+				title: "Figma",
+				img:
+					"https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg"
+			}
+		]
+	},
+	{
 		id: 2,
 		title: "Hook Facts",
 		description:
@@ -65,29 +88,6 @@ var projects = [
 		techUsed: "React, HTML, CSS",
 		gitHubURL: "https://github.com/carltonf25/freddie-match",
 		iDid: ["Front end development using React, JavaScript, CSS, and HTML"],
-		tech: [
-			{
-				title: "React",
-				img:
-					"https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
-			},
-			{
-				title: "Figma",
-				img:
-					"https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg"
-			}
-		]
-	},
-	{
-		id: 5,
-		title: "Acquire (UI Prototype)",
-		description:
-			"This is a test UI for an app that tracks potential business acquisitions",
-		vidURL: "https://acquire.netlify.com",
-		techUsed: "React, HTML, CSS, Styled Components, Figma",
-		gitHubURL: "https://github.com/carltonf25/acquire",
-		liveURL: "https://acquire.netlify.com/",
-		iDid: ["React UI", "Designed in Figma"],
 		tech: [
 			{
 				title: "React",
