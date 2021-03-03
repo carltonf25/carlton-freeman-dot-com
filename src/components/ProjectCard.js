@@ -53,7 +53,7 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
       >
         {title}
       </h2>
-      <p style={{ textAlign: `left` }}>{description}</p>
+      <p style={{ textAlign: `left`, fontSize: "1.3rem" }}>{description}</p>
       <div
         style={{
           marginBottom: `1.5em`,
@@ -70,6 +70,7 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
           </a>
         )}
       </div>
+      <h4>Built with:</h4>
       <div>
         {tech.map((t) => (
           <img

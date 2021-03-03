@@ -13,7 +13,7 @@ const FeaturedButton = styled.button`
   cursor: pointer;
   margin-top: 15px;
   padding: 15px;
-  color: #2c3551;
+  color: #fff;
   background: #bd93f9;
   box-shadow: 0 4px 6px hsla(0, 0%, 0.2);
   text-transform: uppercase;
@@ -23,12 +23,11 @@ const FeaturedButton = styled.button`
   border-radius: 3px;
   font-size: 16px;
   max-width: 250px;
-  font-family: "Noto Serif";
-  font-weight: 700;
+  font-family: "Open Sans";
+  font-weight: bold;
 
   &:hover {
     transform: scale(1.02);
-    color: #2c3551;
     background: #b28ce9;
     box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
   }

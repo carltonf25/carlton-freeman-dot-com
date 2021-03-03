@@ -1,4 +1,4 @@
-import lumenLogo from "./img/lumen-logo.png";
+import laravelLogo from "./img/laravel-logo.png";
 import nodeLogo from "./img/node-logo.png";
 import graphQLLogo from "./img/graphql-logo.png";
 var projects = [
@@ -47,13 +47,8 @@ var projects = [
           "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
       },
       {
-        title: "Figma",
-        img:
-          "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg",
-      },
-      {
         title: "Lumen",
-        img: lumenLogo,
+        img: laravelLogo,
       },
     ],
     iDid: [
@@ -78,11 +73,6 @@ var projects = [
         title: "React",
         img:
           "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
-      },
-      {
-        title: "Figma",
-        img:
-          "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg",
       },
     ],
   },
