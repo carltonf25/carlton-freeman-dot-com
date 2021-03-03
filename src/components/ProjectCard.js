@@ -12,6 +12,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.3rem;
 
   .card-link {
     margin: 1em;
@@ -30,6 +31,7 @@ const CardWrapper = styled.div`
   }
 
   @media only screen and (max-width: 950px) {
+    max-width: 900px;
     width: 100%;
   }
 `;
@@ -46,7 +48,7 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
           margin: `0 auto`,
           borderBottom: hovered ? `4px solid #ff71e0` : `none`,
           width: `50%`,
-          transition: `0.2s ease`
+          transition: `0.2s ease`,
         }}
       >
         {title}
@@ -54,20 +56,22 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
       <p style={{ textAlign: `left` }}>{description}</p>
       <div
         style={{
-          marginBottom: `1.5em`
+          marginBottom: `1.5em`,
         }}
       >
-        <a className="card-link" target="blank" href={gitHubURL}>
-          GitHub
-        </a>
+        {gitHubURL && (
+          <a className="card-link" target="blank" href={gitHubURL}>
+            GitHub
+          </a>
+        )}
         {liveURL && (
           <a className="card-link" target="blank" href={liveURL}>
-            Live Site
+            VIEW
           </a>
         )}
       </div>
       <div>
-        {tech.map(t => (
+        {tech.map((t) => (
           <img
             title={t.title}
             alt={t.title}
@@ -75,7 +79,7 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
             style={{
               width: `2em`,
               maxWidth: `50px`,
-              marginRight: `1em`
+              marginRight: `1em`,
             }}
           />
         ))}

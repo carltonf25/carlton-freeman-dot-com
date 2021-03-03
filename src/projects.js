@@ -1,5 +1,37 @@
 import lumenLogo from "./img/lumen-logo.png";
+import nodeLogo from "./img/node-logo.png";
+import graphQLLogo from "./img/graphql-logo.png";
 var projects = [
+  {
+    id: 6,
+    title: "BoxLock Control",
+    description:
+      "Enterprise platform for managing access control in BoxLock's larger accounts.",
+    liveURL: "https://www.getboxlock.com/solution#platform",
+    tech: [
+      {
+        title: "React",
+        img:
+          "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
+      },
+      {
+        title: "Node",
+        img: nodeLogo,
+      },
+      {
+        title: "Typescript",
+        img: "https://iconape.com/wp-content/png_logo_vector/typescript.png",
+      },
+      {
+        title: "GraphQL",
+        img: graphQLLogo,
+      },
+    ],
+    iDid: [
+      "Front end development using React, Typescript, CSS, and HTML",
+      "API server using Node, Typescript, and GraphQL",
+    ],
+  },
   {
     id: 1,
     title: "Game Night",
@@ -51,79 +83,6 @@ var projects = [
         title: "Figma",
         img:
           "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Hook Facts",
-    description:
-      "A celebration of the 1991 cinematic masterpiece, Hook, written using React hooks",
-    gif: "https://p33.tr1.n0.cdn.getcloudapp.com/items/BlupJw2b/hook-facts.gif",
-    tech: [
-      {
-        title: "React",
-        img:
-          "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
-      },
-      {
-        title: "Figma",
-        img:
-          "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg",
-      },
-    ],
-    gitHubURL: "https://github.com/carltonf25/hook-facts",
-    liveURL: "https://hook-facts.netlify.com/",
-    iDid: [
-      "UI Design in Figma",
-      "Front end development using React, JavaScript, CSS, and HTML",
-      "Mock API server using typicode/json-server",
-    ],
-  },
-  {
-    id: 3,
-    title: "Freddie Match",
-    description: "A memory game featuring my very photogenic dog, Freddie.",
-    vidURL: "https://carltonfreeman24.wistia.com/medias/9bfeu6iqfn",
-    techUsed: "React, HTML, CSS",
-    gitHubURL: "https://github.com/carltonf25/freddie-match",
-    iDid: ["Front end development using React, JavaScript, CSS, and HTML"],
-    tech: [
-      {
-        title: "React",
-        img:
-          "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png",
-      },
-      {
-        title: "Figma",
-        img:
-          "https://i7.pngguru.com/preview/92/808/966/figma-user-interface-design-designer-logo-apps-design.jpg",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "ScheduleBot",
-    description:
-      "A Slack bot that allows users to schedule Slack messages to send at a specified date and time.",
-    vidURL: "https://carltonfreeman24.wistia.com/medias/pvt62fjtt3",
-    techUsed: "Express, Node, Slack API",
-    gitHubURL: "https://github.com/carltonf25/schedulebot",
-    iDid: [
-      "Back end development in Node and Express",
-      "Data management in Postgres",
-      "Slack interactivity via API",
-    ],
-    tech: [
-      {
-        title: "Node",
-        img:
-          "https://banner2.kisspng.com/20180619/vjl/kisspng-node-js-angularjs-react-javascript-npm-node-js-5b28f6111cb2c9.1605132215294110891176.jpg",
-      },
-      {
-        title: "Postgres",
-        img:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
       },
     ],
   },

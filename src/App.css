@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic&subset=latin,latin-ext");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&family=Noto+Serif:wght@400;700&family=Open+Sans&display=swap");
+
+:root {
+  font-size: 12px;
+  line-height: 2.5rem;
+}
 
 body {
   background: rgb(243, 243, 243);
@@ -7,7 +12,7 @@ body {
 }
 .App {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Noto Serif", sans-serif;
   color: rgb(36, 36, 36);
 }
 
@@ -76,29 +81,7 @@ body {
   width: 80%;
 }
 
-.featuredBtn {
-  cursor: pointer;
-  margin-top: 15px;
-  padding: 15px;
-  color: #2c3551;
-  background: #bd93f9;
-  box-shadow: 0 4px 6px hsla(0, 0%, 0.2);
-  text-transform: uppercase;
-  transition: 0.2s ease;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  font-size: 16px;
-  max-width: 250px;
-}
-
-.featuredBtn:hover {
-  transform: scale(1.03);
-  color: #2c3551;
-  background: #b28ce9;
-  box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
-}
-j .card-link {
+.card-link {
   margin: 1em;
   text-decoration: none;
 }
@@ -171,7 +154,9 @@ j .card-link {
 }
 
 @media only screen and (max-width: 950px) {
-  width: 100%;
+  .project-card {
+    width: 100%;
+  }
 }
 /* iPhone 6, 7, 8 */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {

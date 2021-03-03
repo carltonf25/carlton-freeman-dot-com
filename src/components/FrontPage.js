@@ -1,15 +1,45 @@
 import React from "react";
+import styled from "styled-components";
+
+const TitleHeader = styled.h1`
+  font-family: "Noto Serif";
+  font-weight: "bold";
+  color: red;
+`;
+
+const FeaturedButton = styled.button`
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 15px;
+  color: #2c3551;
+  background: #bd93f9;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0.2);
+  text-transform: uppercase;
+  transition: 0.2s ease;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  max-width: 250px;
+  font-family: serif;
+  font-weight: 700;
+
+  &:hover {
+    transform: scale(1.02);
+    color: #2c3551;
+    background: #b28ce9;
+    box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
+  }
+`;
 
 const FrontPage = ({ toggle }) => (
   <main className="front-page-content">
     <div className="basic-page-info">
-      <h1>
+      <TitleHeader>
         Hi, I'm <span className="nameSpan">Carlton Freeman</span>. <br />
         I'm a full-stack JavaScript developer from Atlanta.
-      </h1>
-      <button className="featuredBtn" onClick={() => toggle()}>
-        FEATURED PROJECTS
-      </button>
+      </TitleHeader>
+      <FeaturedButton>FEATURED PROJECTS</FeaturedButton>
       <div className="social-link-container">
         <ul className="social-link-ul">
           <li>

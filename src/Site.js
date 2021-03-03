@@ -2,7 +2,37 @@ import React, { useState } from "react";
 import "./App.css";
 import Projects from "./components/Projects";
 import BackToTopButton from "./components/BackToTopButton";
-import mediumLogo from "./img/medium-logo.jpg";
+import styled from "styled-components";
+
+const TitleHeader = styled.h1`
+  font-weight: "bold";
+  font-size: 4rem;
+`;
+
+const FeaturedButton = styled.button`
+  cursor: pointer;
+  margin-top: 15px;
+  padding: 15px;
+  color: #2c3551;
+  background: #bd93f9;
+  box-shadow: 0 4px 6px hsla(0, 0%, 0.2);
+  text-transform: uppercase;
+  transition: 0.2s ease;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-size: 16px;
+  max-width: 250px;
+  font-family: "Noto Serif";
+  font-weight: 700;
+
+  &:hover {
+    transform: scale(1.02);
+    color: #2c3551;
+    background: #b28ce9;
+    box-shadow: 0px 1px 4px 0px rgb(0, 0, 0, 0.14);
+  }
+`;
 
 const Site = () => {
   const [toggle, setToggle] = useState(false);
@@ -20,39 +50,34 @@ const Site = () => {
               height: `100vh`,
               display: `flex`,
               flexDirection: `column`,
-              alignItems: `center`
+              alignItems: `center`,
+              lineHeight: `2.75rem`,
             }}
           >
-            <h1
-              style={{
-                fontSize: `3em`,
-                fontWeight: 500
-              }}
-            >
+            <TitleHeader>
               Hi, I'm <span className="nameSpan">Carlton</span>.
-            </h1>
+            </TitleHeader>
             <h2
               style={{
                 fontSize: `24px`,
                 fontWeight: 500,
                 textAlign: `left`,
-                maxWidth: `560px`
+                maxWidth: `560px`,
               }}
             >
               I build applications and websites using modern web technologies,
               like React, Node, Express, and Laravel.
             </h2>
-            <button
-              className="featuredBtn"
+            <FeaturedButton
               onClick={() =>
                 window.scrollTo({
                   top: `850`,
-                  behavior: "smooth"
+                  behavior: "smooth",
                 })
               }
             >
               FEATURED PROJECTS
-            </button>
+            </FeaturedButton>
             <div className="social-link-container">
               <ul className="social-link-ul">
                 <li>

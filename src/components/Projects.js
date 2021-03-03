@@ -9,6 +9,8 @@ import projects from "../projects.js";
 const ProjectsWrapper = styled.div`
   height: 100vh;
   text-align: center;
+  font-size: 1.5rem;
+
   .card-container {
     justify-content: center;
     align-items: stretch;
@@ -57,11 +59,11 @@ const ProjectsWrapper = styled.div`
 const Projects = () => {
   return (
     <Spring from={{ right: -500, opacity: 0 }} to={{ right: 0, opacity: 1 }}>
-      {slideIn => (
+      {(slideIn) => (
         <ProjectsWrapper style={slideIn}>
           <h1>Projects</h1>
           <div className="card-container">
-            {projects.map(project => (
+            {projects.map((project) => (
               <ProjectCard
                 title={project.title}
                 description={project.description}
