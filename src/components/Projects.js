@@ -61,7 +61,7 @@ const Projects = () => {
     <Spring from={{ right: -500, opacity: 0 }} to={{ right: 0, opacity: 1 }}>
       {(slideIn) => (
         <ProjectsWrapper style={slideIn}>
-          <h1>Projects</h1>
+          <h1>My Work</h1>
           <div className="card-container">
             {projects.map((project) => (
               <ProjectCard
