@@ -36,7 +36,7 @@ var projects = [
     id: 1,
     title: "Game Night",
     description:
-      "An application for creating and managing game nights with friends. Enter an event code to view an event and RSVP, or log in to create and manage your own events.",
+      "An application for creating and managing game nights with friends.",
     vidURL: "https://carltonfreeman24.wistia.com/medias/4ab8ezqze3",
     gitHubURL: "https://github.com/carltonf25/game-night-api",
     liveURL: "https://game-night-v1.netlify.com",
@@ -60,7 +60,7 @@ var projects = [
   },
   {
     id: 5,
-    title: "Acquire (UI Prototype)",
+    title: "Acquire",
     description:
       "This is a test UI for an app that tracks potential business acquisitions",
     vidURL: "https://acquire.netlify.com",

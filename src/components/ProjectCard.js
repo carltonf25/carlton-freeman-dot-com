@@ -6,7 +6,7 @@ const CardWrapper = styled.div`
   box-shadow: 0 4px 6px rgba(100, 100, 100, 0.2);
   padding: 1.5em;
   margin: 1em;
-  max-width: 300px;
+  max-width: 260px;
   transition: 0.2s ease;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,6 @@ const ProjectCard = ({ title, description, tech, liveURL, gitHubURL }) => {
         style={{
           margin: `0 auto`,
           borderBottom: hovered ? `4px solid #ff71e0` : `none`,
-          width: `50%`,
           transition: `0.2s ease`,
         }}
       >
