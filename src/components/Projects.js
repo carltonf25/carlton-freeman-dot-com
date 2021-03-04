@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import { Spring } from "react-spring/renderprops";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
+import { PageHeading } from "../Site";
 import ReactPlayer from "react-player";
 import projects from "../projects.js";
 
 // styled components 💅
 const ProjectsWrapper = styled.div`
-  height: 100vh;
   text-align: center;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70%;
 
   .card-container {
     justify-content: center;
@@ -61,7 +65,7 @@ const Projects = () => {
     <Spring from={{ right: -500, opacity: 0 }} to={{ right: 0, opacity: 1 }}>
       {(slideIn) => (
         <ProjectsWrapper style={slideIn}>
-          <h1>My Work</h1>
+          <PageHeading>My Work</PageHeading>
           <div className="card-container">
             {projects.map((project) => (
               <ProjectCard

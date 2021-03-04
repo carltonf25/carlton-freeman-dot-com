@@ -2,7 +2,6 @@
 
 :root {
   font-size: 12px;
-  line-height: 2.5rem;
 }
 
 body {
@@ -14,6 +13,9 @@ body {
   text-align: center;
   font-family: "Noto Serif", sans-serif;
   color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-header {
