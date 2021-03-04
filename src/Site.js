@@ -67,7 +67,7 @@ const Site = () => {
           }}
         >
           I build applications and websites using modern web technologies, like
-          React, Node, Express, and Laravel.
+          React, Typescript, Node, and GraphQL.
         </h2>
         <FeaturedButton
           onClick={() =>
